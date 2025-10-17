@@ -430,6 +430,7 @@ private:
             JUCE_END_IGNORE_WARNINGS_MSVC
         }
 
+        ARA::ARAAPIGeneration getHighestSupportedApiGeneration() const noexcept override { return ARA::kARAAPIGeneration_2_0_Final; }
         const char* getFactoryID() const noexcept override         { return JucePlugin_ARAFactoryID; }
         const char* getPlugInName() const noexcept override        { return JucePlugin_Name; }
         const char* getManufacturerName() const noexcept override  { return JucePlugin_Manufacturer; }
