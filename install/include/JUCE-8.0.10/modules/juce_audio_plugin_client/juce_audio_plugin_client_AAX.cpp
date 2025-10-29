@@ -93,6 +93,7 @@ static_assert (AAX_SDK_CURRENT_REVISION >= AAX_SDK_2p6p1_REVISION, "JUCE require
 #if JucePlugin_Enable_ARA
 #include <ARAAAX.h>
 #include <AAX_VARABinding.h>
+#include <AAX_VARABinding.cpp>
 #endif
 
 JUCE_END_IGNORE_WARNINGS_MSVC

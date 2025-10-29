@@ -1157,7 +1157,8 @@ function(juce_set_aax_sdk_path path)
     target_include_directories(juce_aax_sdk INTERFACE
         "${path}"
         "${path}/Interfaces"
-        "${path}/Interfaces/ACF")
+        "${path}/Interfaces/ACF"
+        "${path}/NonPublic/ARA")
     set_target_properties(juce_aax_sdk PROPERTIES INTERFACE_JUCE_AAX_DEFAULT_ICON "${path}/Utilities/PlugIn.ico")
 endfunction()
 
