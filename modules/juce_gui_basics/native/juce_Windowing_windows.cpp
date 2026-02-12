@@ -3821,6 +3821,9 @@ private:
     {
         handleLeftClickInNCArea (wParam);
 
+        if (component.isCurrentlyBlockedByAnotherModalComponent())
+            return 0;
+
         switch (wParam)
         {
             case HTCLOSE:

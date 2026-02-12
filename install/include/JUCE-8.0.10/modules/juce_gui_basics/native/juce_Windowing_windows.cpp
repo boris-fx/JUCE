@@ -3821,6 +3821,13 @@ private:
     {
         handleLeftClickInNCArea (wParam);
 
+        // [CrumplePop patch] Block caption drag when a modal dialog is active.
+        // Without this, handleLeftClickInNCArea() detects modal state and plays
+        // the alert, but returns void — so we fall through to HTCAPTION which
+        // saves captionMouseDown and enables a deferred drag on next mouse move.
+        if (component.isCurrentlyBlockedByAnotherModalComponent())
+            return 0;
+
         switch (wParam)
         {
             case HTCLOSE:
